@@ -4,16 +4,6 @@ Uno-dbyll is a simple, clean, responsive and stylist theme for jekyll.
 
 :Author: Ankan Biswas
 
-Snapshots - Desktop
----------------------------------------
-
-.. image:: uno-dbyll_00.png
-
-.. image:: uno-dbyll_01.png
-
-.. image:: uno-dbyll_02.png
-
-
 Copyright (c) 2013 Ankan Biswas
 ------------------------------------------------------------
 
