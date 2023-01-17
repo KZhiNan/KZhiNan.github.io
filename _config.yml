@@ -26,5 +26,6 @@ author:
   facebook: ""
   googleplus: ""
   bio: "Simple, clean, responsive and stylist theme for jekyll. "
+  logo: /assets/media/log.jpg
   # uno-dbyll: https://raw.githubusercontent.com/meliodus/uno-dbyll/gh-pages/uno-dbyll.png
 # raw.githubusercontent.com/${user}/${repo}/${branch}/${path}
