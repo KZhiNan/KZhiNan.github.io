@@ -85,7 +85,9 @@ footer {
 	position: fixed;
 	padding-top: 8%;
 	height: 100%;
+	/*
 	background-color:#6049df;
+	*/
 	background-image: url("/assets/media/background-cover.jpg");	
 	/*
 	background-image: url("/assets/media/cover.png"),url("/assets/media/background-cover.jpg");	
