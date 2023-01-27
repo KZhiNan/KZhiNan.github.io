@@ -13,7 +13,7 @@ paginate_path: "page/:num"
 categories_path : categories.html
 tags_path : tags.html
 
-BASE_PATH : "https://kzhinan.github.io"
+BASE_PATH : ""
 
 title : KZhiNan
 
