@@ -5,214 +5,226 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Jan 2023 11:07:04 +0800</pubDate>
-    <lastBuildDate>Fri, 27 Jan 2023 11:07:04 +0800</lastBuildDate>
+    <pubDate>Fri, 27 Jan 2023 20:14:37 +0800</pubDate>
+    <lastBuildDate>Fri, 27 Jan 2023 20:14:37 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
-        <title></title>
-        <description>&lt;p&gt;목차&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;버전 관리 시스템이란?&lt;/li&gt;
-  &lt;li&gt;버전 관리 소프트웨어의 종류&lt;/li&gt;
-  &lt;li&gt;버전 관리 시스템의 종류&lt;/li&gt;
-  &lt;li&gt;Git과 SVN의 주요 차이점&lt;/li&gt;
-  &lt;li&gt;Git의 기본이론&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(1/5)</title>
+        <description>&lt;div class=&quot;wrapper&quot;&gt;
+	&lt;blockquote&gt;
+	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
+	    &lt;ul&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index1&quot;&gt;버전 관리 시스템이란?&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index2&quot;&gt;버전 관리 소프트웨어의 종류&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index3&quot;&gt;버전 관리 시스템의 종류&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index4&quot;&gt;Git과 SVN의 주요 차이점&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index5&quot;&gt;Git의 기본이론&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/blockquote&gt;
+	&lt;hr class=&quot;hr-line2&quot; style=&quot;background-color:black&quot; /&gt;
+	&lt;ul&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index1&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold;&quot;&gt;버전 관리 시스템이란?&lt;/h3&gt;
+	            &lt;p&gt;
+	                버전관리(Revision control)는 개발과정에서 사용하는 파일, 디렉토리 등에 대한 수정 이력을 시간에 따라 기록 및 관리하며, 변경 이력에 대해 쉽게 열람할 수 있을 뿐만 아니라, 특정 시점의 버전으로 복원하기 편하게 도와주는 시스템이다. 아래는 버전 관리 시스템의 장점을 간단하게 정리해 보았다. 
+	            &lt;/p&gt;
+	            &lt;ul style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;공간에 제한받지 않고 여러 사람과 협동 개발이 가능하다.&lt;/li&gt;
+	                &lt;li&gt;하나 또는 그 이상의 파일의 수정 및 관리 이력을 추적하고 기록한다.&lt;/li&gt;
+	                &lt;li&gt;각 버전의 백업을 통해 프로젝트 파일과 문서의 구성을 보호한다.&lt;/li&gt;
+	                &lt;li&gt;업무량에 대해 집계 해주기 때문에 공헌도 및 인력관리에 수월하다.&lt;/li&gt;
+	                &lt;li&gt;병행개발을 통해 개발 효율을 향상할 수 있다.&lt;/li&gt;
+	                &lt;li&gt;전체 소프트웨어의 개발 과정을 추적기록한다.&lt;/li&gt;
+	                &lt;li style=&quot;color:#FF0000; font-weight:bold;&quot;&gt;개발자들의 부담을 줄이고, 시간절약과 동시에 인적 오류를 줄일 수 있다.&lt;/li&gt;
+	            &lt;/ul&gt;
+	            &lt;p&gt;
+	                쉽게 정리하면 1명 이상이 개발하는 프로젝트를 관리하는데 도움을 주는 시스템이라고 생각하면 된다. 만약 프로젝트 진행 과정에서 버전관리에 대한 제대로 된 프로세스가 없다면, 소프트웨어 개발 과정 중 코드 일관성, 중복 내용, 병행개발 등 다양한 부분에서 문제가 발생할 우려가 있다.
+	            &lt;/p&gt;
+	            &lt;img src=&quot;/assets/media/git/1/down.jpg&quot; alt=&quot;revision control example&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	            &lt;p&gt;
+	                간단한 예시를 들자면 다음 사진과 같다. 누구나 한 번쯤은 회사 업무 및 학교 과제를 진행할 때 다음과 같이 로컬에서 파일의 버전을 수기로 부여해 관리해본 경험이 있을 것이다. 만약 2인 이상의 협업 프로젝트를 다음과 같이 관리한다면, 파일 병합하는 과정에서 시간도 걸리고, 어느 파일이 최신인지도 부정확하고, 사람의 손과 육안으로 병합하는 과정에서 놓치는 부분도 반드시 생길 것이므로 버전 관리 시스템이 절실하게 필요한 것이다.
+	            &lt;/p&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index2&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;버전 관리 소프트웨어의 종류&lt;/h3&gt;
+	            &lt;p&gt;버전관리 소프트웨어의 종류는 많지만, 다음과 같은 소프트웨어가 주를 이룬다.&lt;/p&gt;
+	            &lt;ul style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;Git&lt;/li&gt;
+	                &lt;li&gt;SVN(Subversion)&lt;/li&gt;
+	                &lt;li&gt;CVS(Concurrent Versions System)&lt;/li&gt;
+	                &lt;li&gt;VSS(Microsoft Visual SourceSafe)&lt;/li&gt;
+	                &lt;li&gt;TFS(Team Foundation Server)&lt;/li&gt;
+	                &lt;li&gt;Visual Studio Online&lt;/li&gt;
+	            &lt;/ul&gt;
+	            &lt;p&gt;
+	                위 소프트웨어 중 가장 많이 사용되는 것은 Git과 SVN이며, Git은 무료이고 보편화된 소프트웨어이므로 우리는 Git을 배워야 한다. Git에 대해 알아보기 전 간단하게 버전관리 시스템의 종류에 대해서 알아보자.
+	            &lt;/p&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index3&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;버전 관리 시스템의 종류&lt;/h3&gt;
+	            &lt;ol&gt;
+	                &lt;li&gt;
+	                    &lt;h4&gt;로컬 버전 관리(Local VCS)&lt;/h4&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image1.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;p&gt;
+	                        디렉토리에 파일을 복사해 버전을 관리하는 방식은 간단하기 때문에 자주 사용되지만, 실수로 삭제하거나 파일을 잘못 고치는 문제 때문에 데이터베이스를 사용해 파일의 변경 정보를 관리하는 시스템을 만들었는데, 그것이 로컬 버전 관리 시스템이다. 여러 사람과의 협업보다는 개인 프로젝트에 적합하며, 컴퓨터가 고장나 내부 정보가 통째로 날아간다면 복구할 방법이 없다는 단점이 있다. 
+	                    &lt;/p&gt;
+	                    &lt;p&gt;
+	                        대표 도구로는 &lt;code&gt;RCS(Revision Control System)&lt;/code&gt;가 있다.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;h4&gt;중앙집중식 버전 관리(CVCS)&lt;/h4&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image2.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;p&gt;
+	                        중앙 Server에서 모든 버전의 데이터를 관리 및 저장하며, 수정하기 위해서는 Server에 요청해 파일을 받은 후 수정하고, 다시 Server에 올리는 방식이다. 로컬 버전 관리보다 협업이 쉬워지고 관리자가 누가 어떤 일을 하고 있는지 알기 쉬운 장점이 있다. 하지만 단점으로 2개를 꼽을 수 있다.
+	                    &lt;/p&gt;
+	                    &lt;ul&gt;
+	                        &lt;li&gt;
+	                            &lt;p&gt;협업의 규모가 커지면 수정 충돌 문제가 발생할 우려가 있다.&lt;/p&gt;
+	                            &lt;img src=&quot;/assets/media/git/1/image3.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                            &lt;p&gt;
+	                                간단한 예시로 같은 파일을 2명의 작업자가 중앙 Server로부터 받은 이후 각자 다른 내용을 수정 후 다시 Server에 올렸을 때 두 개의 수정내용 중 한 개만 반영되는 수정 충동 문제가 발생할 수 있다.
+	                            &lt;/p&gt;
+	                        &lt;/li&gt;
+	                        &lt;li&gt;
+	                            &lt;p&gt;
+	                                만약 서버 연결에 문제가 생기면, 사용자는 오직 자신의 로컬에 있는 파일만 사용할 수 있기 때문에, 다른 사용자와의 협업과 최신버전과의 동기화 문제가 발생한다. 또한 모든 데이터를 가지고 있던 서버에 손상이나 고장이 나면, 모든 데이터를 잃을 수 있다.
+	                            &lt;/p&gt;
+	                        &lt;/li&gt;
+	                    &lt;/ul&gt;
+	                    &lt;p&gt;
+	                        대표 도구로는 &lt;code&gt;SVN, CVS, VSS&lt;/code&gt;등이 있다.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;h4&gt;분산 버전 관리 시스템(DVCS)&lt;/h4&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image4.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;p&gt;
+	                        서버뿐만 아니라 모든 사용자가 모든 버전에 대한 히스토리를 가지고 있기 때문에, 로컬에서도 수정 이력과 내용을 볼 수 있으며, 만약 인터넷 연결 문제로 오프라인 상태로 동기화를 시도해도, 나중에 인터넷이 연결된 이후 서버나 다른 사용자들에게 PUSH만 잘해주면 된다. 그래서 인터넷 연결 문제 때문에 작업에 지장을 받지 않으며, 만약 중앙 Server나 로컬 컴퓨터가 고장 나도, 정상적인 로컬이 하나만 살아 있어도 모든 데이터를 복원하는데 문제가 되지 않기 때문에 가장 안정적이고, 편리하나, 이는 로컬의 저장 공간을 점유한다는 단점이 존재한다. 
+	                    &lt;/p&gt;
+	                    &lt;p&gt;
+	                        대표 도구로는 &lt;code&gt;Git&lt;/code&gt;이 있다.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	            &lt;/ol&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index4&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;Git과 SVN의 주요 차이점&lt;/h3&gt;
+	            &lt;ul style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;SVN은 중앙 집중식 버전 관리 시스템이지만, Git은 분산 버전 관리 시스템이다.&lt;/li&gt;
+	                &lt;li&gt;SVN은 모든 버전에 대한 원본 파일을 저장하므로 용량이 크지만, Git은 파일에 대한 링크(메타데이터)만 저장하기 때문에 용량이 작다.&lt;/li&gt;
+	                &lt;li&gt;SVN은 사용자 인터페이스 조작이 편리해 개발자 이외 직군의 사람도 사용하기 쉽지만, Git은 오픈 소스 프로젝트 개발자를 위한 것이라 사용 편의성보다는 효율성에 집중을 둔 것으로 개발자가 사용하기 적합하다.&lt;/li&gt;
+	                &lt;li&gt;SVN은 기업 내 프로젝트 관리자를 중심으로 하는 병렬 프로젝트 개발에 적합하고, Git은 오픈 소스 프로젝트에 다양한 사람이 참여하는 단일 프로젝트 개발에 적합하다.&lt;/li&gt;
+	                &lt;li&gt;SVN은 서브 디렉토리에 대한 읽기 및 쓰기 권한을 그룹 또는 개인별로 엄격하게 구분 및 관리하지만, Git은 계정만 있으면 누구나 코드를 가져올 수 있다. &lt;/li&gt;
+	            &lt;/ul&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index5&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;Git의 기본이론&lt;/h3&gt;
+	            &lt;p&gt;
+	                Git 프로젝트에는 다음 그림과 같이 Working Directory, Staging Area(Index), .git directory(Repository), Remote 4가지 단계와 3가지 파일 상태가 존재한다. 
+	            &lt;/p&gt;
+	            &lt;h4 class=&quot;hr-sect&quot;&gt;단계&lt;/h4&gt;
+	            &lt;ul style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Working Directory&lt;/code&gt; : Workingspace라고도 하며, 프로젝트 하는데 있어 작업을 하는 디렉토리를 의미한다. 프로젝트 코드가 저장되어 있는 장소라고 생각하면 된다. 
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Staging Area(Index)&lt;/code&gt; : 변경 사항을 임시로 저장하는 영역으로, 곧 commit할 파일에 대한 정보를 저장하고 있는 파일이다.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;.git directory(Repository)&lt;/code&gt; : 프로젝트 모든 버전에 대한 메타데이터와 객체 데이터베이스를 저장하는 곳으로, Git의 핵심이다. 
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Remote&lt;/code&gt; : 간단히 말하면 원격창고이다. 코드를 호스팅하는 서버로 프로젝트 그룹 중 원격 데이터 교환을 위해 존재하는 하나의 로컬이라고 보면 된다. 
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	            &lt;/ul&gt;
+	            &lt;h4 class=&quot;hr-sect&quot;&gt;상태&lt;/h4&gt;
+	            &lt;ul style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Committed&lt;/code&gt; : 데이터가 로컬 데이터베이스에 안전하게 저장된 파일.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Modified&lt;/code&gt; : 수정한 파일을 아직 로컬 데이터베이스에 커밋하지 않은 상태의 파일.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        &lt;code&gt;Staged&lt;/code&gt; : 현재 수정한 파일을 곧 커밋할 것이라고 표시한 상태의 파일.
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	            &lt;/ul&gt;
+	            &lt;p&gt;Git의 일반적인 작업 흐름은 다음과 같다.&lt;/p&gt;
+	            &lt;ol style=&quot;font-style:italic;&quot;&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        Working Directory에 파일이 추가되거나 수정. -&amp;gt; &lt;code&gt;Modified&lt;/code&gt;
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        Modified 상태의 파일을 Staging Area에 넣고 commit할 스냅샷을 만든다. -&amp;gt; &lt;code&gt;Staged&lt;/code&gt;
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	                &lt;li&gt;
+	                    &lt;p&gt;
+	                        Staging Area에 있는 파일을 commit해서 .git directory(Repository) 에 영구적인 스냅샷으로 저장한다. -&amp;gt; &lt;code&gt;Committed&lt;/code&gt;
+	                    &lt;/p&gt;
+	                &lt;/li&gt;
+	            &lt;/ol&gt;
+	            &lt;img src=&quot;/assets/media/git/1/image5.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;p&gt;다음장에서는 Git의 설치 방법과 간단한 사용 방법에 대해 설명하겠다.&lt;/p&gt;
+	&lt;hr class=&quot;hr-line2&quot; style=&quot;background-color:black&quot; /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Version&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Rev.0(2023/01/27) : Release&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Fri, 27 Jan 2023 11:07:04 +0800</pubDate>
-        <link>http://localhost:4000/2023-01-26-1</link>
-        <guid isPermaLink="true">http://localhost:4000/2023-01-26-1</guid>
+        <pubDate>Thu, 26 Jan 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/1</link>
+        <guid isPermaLink="true">http://localhost:4000/1</guid>
+        
+        <category>Git</category>
+        
+        <category>GitHub</category>
+        
+        <category>깃</category>
+        
+        <category>깃허브</category>
         
         
-      </item>
-    
-      <item>
-        <title>응 제목도 한국어</title>
-        <description>&lt;p&gt;한국어 테스트 입니다.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/korean-test</link>
-        <guid isPermaLink="true">http://localhost:4000/korean-test</guid>
-        
-        <category>한국어</category>
-        
-        <category>가능</category>
-        
-        <category>응그래</category>
-        
-        
-        <category>한국어</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code&gt;MONTH&lt;/code&gt; and &lt;code&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 09 Jan 2023 20:06:19 +0800</pubDate>
-        <link>http://localhost:4000/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome-to-jekyll</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Lamp Installation on Arch</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/media/lamp.jpg&quot; width=&quot;85%&quot; /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-Linux, &lt;a href=&quot;http://httpd.apache.org/&quot;&gt;Apache&lt;/a&gt;, MySQL/MariaDB, PHP: In short LAMP, a complete Open Source solution for web-developer. Apache Web Server,Often referred to as simply &lt;a href=&quot;http://httpd.apache.org/&quot;&gt;Apache&lt;/a&gt;, a public-domain open source Web server developed by a loosely-knit group of programmers which runs roughly 50% of the servers in the world.
-Here i show you the simple steps to install LAMP on your Arch System:&lt;/p&gt;
-
-&lt;p&gt;Install php,php-apache,apache and mariadb:
-(note: use your favorite text editor, am using “gedit”)&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pacman&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;S&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mariadb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now configure apache:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gedit&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/etc/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;conf&lt;/span&gt; 
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; comment the line .i.e. put a # before it.&lt;/span&gt;
-
-&lt;span class=&quot;no&quot;&gt;LoadModule&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unique_id_module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod_unique_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;so&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; restart apache&lt;/span&gt;
-
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;systemctl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;httpd&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;then configure mariadb:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;systemctl&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysqld&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql_secure_installation&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; press enter and then &quot;yes&quot; to all.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Lastly configure php and php-apache:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gedit&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/etc/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;httpd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;conf&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; add the following lines at the end of the files&lt;/span&gt;
-
-&lt;span class=&quot;no&quot;&gt;LoadModule&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php5_module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;libphp5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;so&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;AddHandler&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;php&lt;/span&gt; 
-&lt;span class=&quot;no&quot;&gt;Include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;php5_module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;conf&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; save and exit .&lt;/span&gt;
-
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gedit&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/srv/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;php&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#&amp;gt; add this in your php file:&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;php&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phpinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;finally, restart apache and all is done.enjoy!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 Nov 2013 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/lamp-installation-on-Arch</link>
-        <guid isPermaLink="true">http://localhost:4000/lamp-installation-on-Arch</guid>
-        
-        <category>Arch</category>
-        
-        <category>lamp</category>
-        
-        <category>setup</category>
-        
-        <category>php</category>
-        
-        <category>mariadb</category>
-        
-        <category>appache</category>
-        
-        <category>mysql</category>
-        
-        
-        <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Easiest Way To Install Lamp On Ubuntu</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/assets/media/lamp.jpg&quot; width=&quot;85%&quot; /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-LAMP(Linux, Apache, MySQL, PHP or Perl) is one of the most essential servers needed by the web developers or web entrepreneurs around the globe. This tutorial explains one of the easiest ways to install LAMP on Ubuntu. Because Ubuntu uses Linux as it’s kernel we are done with the Linux part ;) .&lt;/p&gt;
-
-&lt;p&gt;Install tasksel on your system:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tasksel&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Tasksel is a Debian/Ubuntu tool that installs multiple related packages as a co-ordinated “task” onto your system.
-Start tasksel:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tasksel&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;select the lamp-server and press ‘Ok’. Follow the steps as directed and create your Mysql password.&amp;lt;/br&amp;gt;
-Lastly,start apache2 server:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;apache2&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Congratulations you have successfully installed LAMP server on your system. To test just visit your web browser and type in the following url:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://localhost/&quot;&gt;http://localhost/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;To test the php installation:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nano&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/var/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;phptest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;php&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;type in and save:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;php&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phpinfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;and open the following url in your browser:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://localhost/phptest.php&quot;&gt;http://localhost/phptest.php&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 Nov 2013 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/easiest-way-to-install-lamp-on-ubuntu</link>
-        <guid isPermaLink="true">http://localhost:4000/easiest-way-to-install-lamp-on-ubuntu</guid>
-        
-        <category>ubuntu</category>
-        
-        <category>lamp</category>
-        
-        <category>setup</category>
-        
-        <category>tasksel</category>
-        
-        
-        <category>linux</category>
+        <category>Git</category>
         
       </item>
     

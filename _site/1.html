@@ -1,11 +1,124 @@
----
-layout: post
-title: 깃 & 깃허브(Git & Github) 입문자를 위한 사용법 튜토리얼(1/5)
-description: 버전관리(Revision control)시스템에 대한 이해와 깃(Git) 기본이론
-categories: [Git]
-tags: [Git, GitHub, 깃, 깃허브]
----
-<div class="wrapper">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>깃 & 깃허브(Git & Github) 입문자를 위한 사용법 튜토리얼(1/5)</title>
+		
+			<meta name="description" content="버전관리(Revision control)시스템에 대한 이해와 깃(Git) 기본이론">
+		
+		<meta name="author" content="KzhiNan">
+		<!-- Enable responsive viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/assets/resources/syntax/syntax.css">
+		<link rel="stylesheet" type="text/css" href="/assets/resources/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/resources/font-awesome/css/font-awesome.min.css">
+		<!-- <link rel="icon" href="https://raw.githubusercontent.com/talk2ankan/uno-dbyll/gh-pages/uno-dbyll.png"> -->
+		<!--
+		<link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/resources/bootstrap/js/bootstrap.js"></script>
+		<!-- 
+		<script type="text/javascript">
+			$(document).ready(function(){
+				if(window.location.href=="/"){
+					$("#sidebar").css({width:'100%'});
+					$("#btnblog").click(function(){
+						$("#sidebar").animate({width:'30%'},'slow');
+					});
+				}
+			});
+		</script>
+		-->
+	</head>
+<body>
+
+  <!-- nav-menu-dropdown -->
+  <div class="btn-group hidden-xs" id="nav-menu">
+   <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown">
+     <i class="fa fa-bars"></i>
+   </button>
+   <ul class="dropdown-menu pull-right" role="menu">
+     <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="/categories.html"><i class="fa fa-folder"></i> Categories</a></li>
+     <li><a href="/tags.html"><i class="fa fa-tags"></i> Tags</a></li>
+     <li class="divider"></li>
+     <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
+   </ul>
+ </div>
+
+<div class="col-sm-4 sidebar hidden-xs" id="sidebar">
+		<! -- sidebar.html -->
+<header class="sidebar-header" role="banner">
+	<a href="">
+		<img src="/assets/media/log.jpg" style="border-radius: 50%; height:150px;width:150px" />
+	</a>
+	<h3 class="title">
+        <a href="">KZhiNan</a>
+         <p style="font-size:20px;">Jekyll Theme</p>
+    </h3>
+    
+    <hr class="hr-line">
+<!--
+<h3 class="title">
+         <p style="font-size:18px"></p>
+    </h3>
+
+    <hr class="hr-line1">
+-->
+ <h3 class="title" style="font-size:30px;">
+ 
+       
+      <a type="button" class="social2" href="http://github.com/KzhiNan">
+        <i class="fa fa-github"></i>
+      </a>
+      
+<!-- 
+       
+      <a type="button" class="social2" href="http://twitter.com/">
+        <i class="fa fa-twitter"></i>
+      </a>
+      
+-->     
+      
+      <a type="button" class="social3" href="mailto:tkdqja7189@gmail.com">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+       <hr class="hr-line1">
+       <a type="button"  style="font-size:20px; padding:7px; padding-left:13px;padding-right:13px;margin-right: 10px;" class="social3 " id="btnblog" href="/#blog">
+        <i class="fa" style="font-weight:bold;letter-spacing:0; font-family:arial,sans-serif">Blog</i>
+      </a>
+      </h3>
+
+</header>
+
+
+
+<! -- sidebar.html end -->
+
+	</div>
+
+<div class="col-sm-8 col-sm-offset-4" id="container">
+  
+<div class="page-header">
+  <h1>깃 & 깃허브(Git & Github) 입문자를 위한 사용법 튜토리얼(1/5) </h1>
+</div>
+  
+<article>
+
+  <div class="col-sm-10">
+   <span class="post-date">
+     
+     January 
+     26th,
+     
+     2023
+      
+   </span>
+    <div class="article_body" id="article_body">
+    <div class="wrapper">
 	<blockquote>
 	    <h4><b>목차</b></h4>
 	    <ul>
@@ -16,7 +129,7 @@ tags: [Git, GitHub, 깃, 깃허브]
 	        <li><a href="#index5">Git의 기본이론</a></li>
 	    </ul>
 	</blockquote>
-	<hr class="hr-line2" style="background-color:black"/>
+	<hr class="hr-line2" style="background-color:black" />
 	<ul>
 	    <li>
 	        <div id="index1">
@@ -36,13 +149,13 @@ tags: [Git, GitHub, 깃, 깃허브]
 	            <p>
 	                쉽게 정리하면 1명 이상이 개발하는 프로젝트를 관리하는데 도움을 주는 시스템이라고 생각하면 된다. 만약 프로젝트 진행 과정에서 버전관리에 대한 제대로 된 프로세스가 없다면, 소프트웨어 개발 과정 중 코드 일관성, 중복 내용, 병행개발 등 다양한 부분에서 문제가 발생할 우려가 있다.
 	            </p>
-	            <img src="/assets/media/git/1/down.jpg" alt="revision control example" width="100%" height="100%">
+	            <img src="/assets/media/git/1/down.jpg" alt="revision control example" width="100%" height="100%" />
 	            <p>
 	                간단한 예시를 들자면 다음 사진과 같다. 누구나 한 번쯤은 회사 업무 및 학교 과제를 진행할 때 다음과 같이 로컬에서 파일의 버전을 수기로 부여해 관리해본 경험이 있을 것이다. 만약 2인 이상의 협업 프로젝트를 다음과 같이 관리한다면, 파일 병합하는 과정에서 시간도 걸리고, 어느 파일이 최신인지도 부정확하고, 사람의 손과 육안으로 병합하는 과정에서 놓치는 부분도 반드시 생길 것이므로 버전 관리 시스템이 절실하게 필요한 것이다.
 	            </p>
 	        </div>
 	    </li>
-	    <hr class="hr-line2"/>
+	    <hr class="hr-line2" />
 	    <li>
 	        <div id="index2">
 	            <h3 style="font-weight:bold">버전 관리 소프트웨어의 종류</h3>
@@ -60,14 +173,14 @@ tags: [Git, GitHub, 깃, 깃허브]
 	            </p>
 	        </div>
 	    </li>
-	    <hr class="hr-line2"/>
+	    <hr class="hr-line2" />
 	    <li>
 	        <div id="index3">
 	            <h3 style="font-weight:bold">버전 관리 시스템의 종류</h3>
 	            <ol>
 	                <li>
 	                    <h4>로컬 버전 관리(Local VCS)</h4>
-	                    <img src="/assets/media/git/1/image1.jpg" alt="Local VCS image" width="100%" height="100%">
+	                    <img src="/assets/media/git/1/image1.jpg" alt="Local VCS image" width="100%" height="100%" />
 	                    <p>
 	                        디렉토리에 파일을 복사해 버전을 관리하는 방식은 간단하기 때문에 자주 사용되지만, 실수로 삭제하거나 파일을 잘못 고치는 문제 때문에 데이터베이스를 사용해 파일의 변경 정보를 관리하는 시스템을 만들었는데, 그것이 로컬 버전 관리 시스템이다. 여러 사람과의 협업보다는 개인 프로젝트에 적합하며, 컴퓨터가 고장나 내부 정보가 통째로 날아간다면 복구할 방법이 없다는 단점이 있다. 
 	                    </p>
@@ -77,14 +190,14 @@ tags: [Git, GitHub, 깃, 깃허브]
 	                </li>
 	                <li>
 	                    <h4>중앙집중식 버전 관리(CVCS)</h4>
-	                    <img src="/assets/media/git/1/image2.jpg" alt="Local VCS image" width="100%" height="100%">
+	                    <img src="/assets/media/git/1/image2.jpg" alt="Local VCS image" width="100%" height="100%" />
 	                    <p>
 	                        중앙 Server에서 모든 버전의 데이터를 관리 및 저장하며, 수정하기 위해서는 Server에 요청해 파일을 받은 후 수정하고, 다시 Server에 올리는 방식이다. 로컬 버전 관리보다 협업이 쉬워지고 관리자가 누가 어떤 일을 하고 있는지 알기 쉬운 장점이 있다. 하지만 단점으로 2개를 꼽을 수 있다.
 	                    </p>
 	                    <ul>
 	                        <li>
 	                            <p>협업의 규모가 커지면 수정 충돌 문제가 발생할 우려가 있다.</p>
-	                            <img src="/assets/media/git/1/image3.jpg" alt="Local VCS image" width="100%" height="100%">
+	                            <img src="/assets/media/git/1/image3.jpg" alt="Local VCS image" width="100%" height="100%" />
 	                            <p>
 	                                간단한 예시로 같은 파일을 2명의 작업자가 중앙 Server로부터 받은 이후 각자 다른 내용을 수정 후 다시 Server에 올렸을 때 두 개의 수정내용 중 한 개만 반영되는 수정 충동 문제가 발생할 수 있다.
 	                            </p>
@@ -101,7 +214,7 @@ tags: [Git, GitHub, 깃, 깃허브]
 	                </li>
 	                <li>
 	                    <h4>분산 버전 관리 시스템(DVCS)</h4>
-	                    <img src="/assets/media/git/1/image4.jpg" alt="Local VCS image" width="100%" height="100%">
+	                    <img src="/assets/media/git/1/image4.jpg" alt="Local VCS image" width="100%" height="100%" />
 	                    <p>
 	                        서버뿐만 아니라 모든 사용자가 모든 버전에 대한 히스토리를 가지고 있기 때문에, 로컬에서도 수정 이력과 내용을 볼 수 있으며, 만약 인터넷 연결 문제로 오프라인 상태로 동기화를 시도해도, 나중에 인터넷이 연결된 이후 서버나 다른 사용자들에게 PUSH만 잘해주면 된다. 그래서 인터넷 연결 문제 때문에 작업에 지장을 받지 않으며, 만약 중앙 Server나 로컬 컴퓨터가 고장 나도, 정상적인 로컬이 하나만 살아 있어도 모든 데이터를 복원하는데 문제가 되지 않기 때문에 가장 안정적이고, 편리하나, 이는 로컬의 저장 공간을 점유한다는 단점이 존재한다. 
 	                    </p>
@@ -112,7 +225,7 @@ tags: [Git, GitHub, 깃, 깃허브]
 	            </ol>
 	        </div>
 	    </li>
-	    <hr class="hr-line2"/>
+	    <hr class="hr-line2" />
 	    <li>
 	        <div id="index4">
 	            <h3 style="font-weight:bold">Git과 SVN의 주요 차이점</h3>
@@ -125,7 +238,7 @@ tags: [Git, GitHub, 깃, 깃허브]
 	            </ul>
 	        </div>
 	    </li>
-	    <hr class="hr-line2"/>
+	    <hr class="hr-line2" />
 	    <li>
 	        <div id="index5">
 	            <h3 style="font-weight:bold">Git의 기본이론</h3>
@@ -177,26 +290,174 @@ tags: [Git, GitHub, 깃, 깃허브]
 	            <ol style="font-style:italic;">
 	                <li>
 	                    <p>
-	                        Working Directory에 파일이 추가되거나 수정. -> <code>Modified</code>
+	                        Working Directory에 파일이 추가되거나 수정. -&gt; <code>Modified</code>
 	                    </p>
 	                </li>
 	                <li>
 	                    <p>
-	                        Modified 상태의 파일을 Staging Area에 넣고 commit할 스냅샷을 만든다. -> <code>Staged</code>
+	                        Modified 상태의 파일을 Staging Area에 넣고 commit할 스냅샷을 만든다. -&gt; <code>Staged</code>
 	                    </p>
 	                </li>
 	                <li>
 	                    <p>
-	                        Staging Area에 있는 파일을 commit해서 .git directory(Repository) 에 영구적인 스냅샷으로 저장한다. -> <code>Committed</code>
+	                        Staging Area에 있는 파일을 commit해서 .git directory(Repository) 에 영구적인 스냅샷으로 저장한다. -&gt; <code>Committed</code>
 	                    </p>
 	                </li>
 	            </ol>
-	            <img src="/assets/media/git/1/image5.jpg" alt="Local VCS image" width="100%" height="100%">
+	            <img src="/assets/media/git/1/image5.jpg" alt="Local VCS image" width="100%" height="100%" />
 	        </div>
 	    </li>
 	</ul>
 	<p>다음장에서는 Git의 설치 방법과 간단한 사용 방법에 대해 설명하겠다.</p>
-	<hr class="hr-line2" style="background-color:black"/>
+	<hr class="hr-line2" style="background-color:black" />
 </div>
-> **Version**
-* Rev.0(2023/01/27) : Release
+<blockquote>
+  <p><strong>Version</strong></p>
+  <ul>
+    <li>Rev.0(2023/01/27) : Release</li>
+  </ul>
+</blockquote>
+
+    </div>
+
+    
+    <ul class="tag_box list-unstyled list-inline">
+      <li><i class="fa fa-folder-open"></i></li>
+      
+      
+       
+        <li><a href="/categories.html#Git-ref">
+          Git <span>(1)</span>
+          
+        </a></li>
+      
+      
+    </ul>
+      
+
+    
+    <ul class="list-inline">
+      <li><i class="fa fa-tags"></i></li>
+      
+      
+       
+        <li>
+          <a href="/tags.html#Git-ref">
+          Git <span>(1)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="/tags.html#GitHub-ref">
+          GitHub <span>(1)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="/tags.html#깃-ref">
+          깃 <span>(1)</span>
+          ,
+          </a>
+        </li>
+       
+        <li>
+          <a href="/tags.html#깃허브-ref">
+          깃허브 <span>(1)</span>
+          
+          </a>
+        </li>
+      
+      
+      
+    </ul>
+      
+
+    <hr>
+
+    <div>
+      <section class="share col-sm-6">
+        <h4 class="section-title">Share Post</h4>
+        <a class="btn btn-default btn-sm twitter" href="http://twitter.com/share?text=깃 & 깃허브(Git & Github) 입문자를 위한 사용법 튜토리얼(1/5)&via="
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter fa-lg"></i>
+          Twitter
+        </a>
+        <a class="btn btn-default btn-sm facebook" href="https://www.facebook.com/sharer/sharer.php"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <i class="fa fa-facebook fa-lg"></i>
+          Facebook
+        </a>
+        <a class="btn btn-default btn-sm gplus"
+           onclick="window.open('https://plus.google.com/share?url='+window.location.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <i class="fa fa-google-plus fa-lg"></i>
+          Google+
+        </a>
+      </section>
+
+      <section class="col-sm-6 author">
+        <img src="/assets/media/log.jpg" style="height:100px;width:100px;" class="img-rounded author-image" />
+        <h4 class="section-title author-name"><b>KZhiNan</b><br/><p style="color:#888;font-size:13px;">Jekyll Theme</p></h4>
+        <p class="author-bio"></p>
+      </section>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <ul class="pager">
+      
+      <li class="previous disabled"><a>&larr; Previous</a></li>
+      
+      
+      <li class="next disabled"><a>Next &rarr;</a>
+      
+    </ul>
+
+  
+  </div>
+  <!--
+       <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'KZhiNan'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    -->
+    
+</article>
+<div class="clearfix"></div>
+
+
+<footer class="navbar navbar-default">
+    <div class="container">
+      <p class="navbar-text pull-left">Some rights reserved &copy; 2023 KzhiNan. </br>
+      Created using <a class="navbar-button" href="https://github.com/twbs/bootstrap">Bootstrap3</a> and <a class="navbar-button" href="https://github.com/jekyll/jekyll">Jekyll</a>. Theme : <a class="navbar-button" href="https://github.com/talk2ankan/uno-dbyll">uno-dbyll</a> by talk2ankan.
+ </p>
+ </div>
+  </footer>
+</div>
+<!--
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'KZhiNan'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+ -->   
+</body>
+</html>
+

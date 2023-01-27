@@ -4,7 +4,7 @@ permalink: :title
 # https://help.github.com/articles/migrating-your-pages-site-from-maruku
 markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 paginate: 10 # pagination based on number of posts
 paginate_path: "page/:num"
 
@@ -13,7 +13,7 @@ paginate_path: "page/:num"
 categories_path : categories.html
 tags_path : tags.html
 
-BASE_PATH : ""
+BASE_PATH : "https://kzhinan.github.io"
 
 title : KZhiNan
 

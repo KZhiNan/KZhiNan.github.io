@@ -2,73 +2,9 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>http://localhost:4000/2023-01-26-1</loc>
+      <loc>http://localhost:4000/1</loc>
       
-        <lastmod>2023-01-27T11:07:04+08:00</lastmod>
-      
-
-      
-        <changefreq>weekly</changefreq>
-      
-
-      
-          <priority>0.5</priority>
-      
-
-    </url>
-  
-    <url>
-      <loc>http://localhost:4000/korean-test</loc>
-      
-        <lastmod>2023-01-20T00:00:00+08:00</lastmod>
-      
-
-      
-        <changefreq>weekly</changefreq>
-      
-
-      
-          <priority>0.5</priority>
-      
-
-    </url>
-  
-    <url>
-      <loc>http://localhost:4000/welcome-to-jekyll</loc>
-      
-        <lastmod>2023-01-09T20:06:19+08:00</lastmod>
-      
-
-      
-        <changefreq>weekly</changefreq>
-      
-
-      
-          <priority>0.5</priority>
-      
-
-    </url>
-  
-    <url>
-      <loc>http://localhost:4000/lamp-installation-on-Arch</loc>
-      
-        <lastmod>2013-11-03T00:00:00+08:00</lastmod>
-      
-
-      
-        <changefreq>weekly</changefreq>
-      
-
-      
-          <priority>0.5</priority>
-      
-
-    </url>
-  
-    <url>
-      <loc>http://localhost:4000/easiest-way-to-install-lamp-on-ubuntu</loc>
-      
-        <lastmod>2013-11-02T00:00:00+08:00</lastmod>
+        <lastmod>2023-01-26T00:00:00+08:00</lastmod>
       
 
       
