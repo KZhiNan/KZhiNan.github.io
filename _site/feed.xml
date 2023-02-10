@@ -5,9 +5,165 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Feb 2023 22:35:44 +0800</pubDate>
-    <lastBuildDate>Sat, 04 Feb 2023 22:35:44 +0800</lastBuildDate>
+    <pubDate>Fri, 10 Feb 2023 22:22:01 +0800</pubDate>
+    <lastBuildDate>Fri, 10 Feb 2023 22:22:01 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(4/6)</title>
+        <description>&lt;div class=&quot;wrapper&quot;&gt;
+	&lt;blockquote&gt;
+	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
+	    &lt;ul&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index1&quot;&gt;GIT PULL&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index2&quot;&gt;GIT PUSH&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index3&quot;&gt;PULL &amp;amp; PUSH 에러 대처법&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/blockquote&gt;
+	&lt;ul&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index1&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold;&quot;&gt;GIT PULL&lt;/h3&gt;
+	            &lt;p&gt;
+	                github의 저장소에 내용이 변경되었거나 추가가 되었다면 &lt;code&gt;git pull&lt;/code&gt;명령을 사용하면 된다. &lt;code&gt;git pull&lt;/code&gt; 명령은 리모트 저장소 브랜치에서 데이터를 가져오고 그 데이터를 자동으로 현재 작업하는 코드와 Merge 시킨다.
+	            &lt;/p&gt;
+                &lt;p&gt;
+                    Github의 GitTest라는 저장소에 pull.txt라는 파일을 추가하고, &lt;code&gt;git pull&lt;/code&gt;을 통해 로컬 저장소로 데이터를 가져오는 예시이다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+	            &lt;p&gt;
+                    &lt;span style=&quot;color:red&quot;&gt;Add file -&amp;gt; Create new file&lt;/span&gt;를 통해 pull.txt 파일을 만든다. 내용은 원하는것을 적으면 된다. 
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/4/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+	            &lt;p&gt;
+	                Visual Studio Code의 TERMINAL창에 &lt;code&gt;git pull&lt;/code&gt;를 입력하면, GitTest 저장소에 우리가 추가했던 pull.txt 파일이 추가되는 것을 확인할 수 있다.
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/4/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+		&lt;br /&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index2&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;GIT PUSH&lt;/h3&gt;
+                &lt;p&gt;
+                    로컬 저장소에 내용이 변경되었거나 추가가 되었다면 &lt;code&gt;git push&lt;/code&gt;명령을 사용하면 된다. 로컬 저장소의 브랜치는 자동으로 리모트 저장소로 전송되지 않기 때문에 &lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;명령을 입력해야 하며 명시적으로 브랜치를 push해야 정보가 전송된다.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    로컬 GitTest 저장소에 push.txt라는 파일을 추가하고, &lt;code&gt;git push&lt;/code&gt;을 통해 github 저장소로 데이터를 전송하는 예시이다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    &lt;code&gt;git add push.txt&lt;/code&gt; 명령을 입력해 Staged 상태로 변경(새롭게 추적할 파일 추가)한다. 
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    &lt;code&gt;git commit -m &quot;add push.txt&quot;&lt;/code&gt; 명령을 입력해 커밋을 해준다. -m 뒤에 comment는 자유롭게 입력하면 된다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    &lt;code&gt;git push origin master&lt;/code&gt; 명령을 입력해 push를 하고 나서 Github에 있는 GitTest저장소를 확인해보면, 추가한 push.txt가 추가된 것을 볼 수 있다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/4/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    여기서 &lt;code&gt;git push origin master&lt;/code&gt; 명령어를 입력했는데, origin은 remote이고 master은 branch이다.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;code&gt;git branch&lt;/code&gt; 명령으로 브랜치를 볼 수 있는데, 기본적으로 Git은 master브랜치를 만든다. 브랜치는 저장된 커밋 사이를 이동할 수 있는 포인터 같은 것이라고 생각하면 된다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    &lt;code&gt;git remote&lt;/code&gt; 명령으로 현재 프로젝트에 등록된 리모트 저장소를 확인할 수 있다. 이 명령은 리모트 저장소의 단축 이름을 보여준다. -v 옵션을 주어 단축이름과 url을 함께 볼수도 있다. 저장소를 Clone 하면 `origin`이라는 리모트 저장소가 자동으로 등록되기 때문에 `origin`이라는 이름을 볼 수 있다. 
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/4/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+		&lt;br /&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index3&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;PULL &amp;amp; PUSH 에러 대처법&lt;/h3&gt;			
+				&lt;p&gt;
+                    github 저장소를 이용하면서 pull이나 push관련해서 에러가 생겨 제대로 작동하지 않는 경우가 있는데, 이번에는 아래 같은 상황이 생겼을 때 해결방법에 대해서 이야기 해보겠다. 
+                &lt;/p&gt;
+				&lt;br /&gt;
+				&lt;h4 class=&quot;hr-sect&quot;&gt;github 저장소로 git push 에러&lt;/h4&gt;
+				&lt;p&gt;
+					github저장소에서 clone해온 프로젝트를 로컬에서 수정 및 추가작업한 내용에 대해 &lt;code&gt;git push&lt;/code&gt;명령을 할 때 
+				&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;failed&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	
+				&lt;p&gt;
+					이는 github에서 한번도 pull없이 push를 할 경우 기존 github저장소의 내용과 commit 불일치로 몇몇 내용이 삭제되는 것을 막기 위해 에러 메세지를 발생시키는 것으로 이때는 &lt;code&gt;git pull&lt;/code&gt;명령을 한번 입력하고 다시 &lt;code&gt;git push&lt;/code&gt;하면 된다.
+				&lt;/p&gt;
+				&lt;p&gt;
+					상단 해결방안이 안되는 경우가 있는데 이때는 아래 명령을 사용해서 강제로 push를 하면 된다.
+				&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	
+				&lt;br /&gt;
+				&lt;h4 class=&quot;hr-sect&quot;&gt;git pull 에러(github 저장소 변경 내용 미적용)&lt;/h4&gt;
+				&lt;p&gt;
+					github저장소 프로젝트 내용 변경 이후 로컬 workspace로 git pull명령을 입력해도 commit은 바뀌는데, 프로젝트 내부 파일 코드의 내용이 변경되지 않는 경우가 있다. 이때는 아래 2개의 명령어를 입력하자.
+				&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hard&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	
+				&lt;p&gt;
+					&lt;code&gt;git fetch --all&lt;/code&gt;은 서버로부터 최신 데이터를 모두 확인하는 것이고, &lt;code&gt;git reset --hard origin/master&lt;/code&gt;명령어는 로컬 workspace에 있는 모든 branch를 버리고 origin/master와 동기화 시킨다는 의미이다. 
+				&lt;/p&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;br /&gt;
+	&lt;p&gt;다음장에서는 github pages와 jekyll을 이용해 웹페이지(블로그) 만드는법에 대해서 알아보겠다.&lt;/p&gt;
+	&lt;br /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Version&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Rev.0(2023/02/09) : Release&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 09 Feb 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/4</link>
+        <guid isPermaLink="true">http://localhost:4000/4</guid>
+        
+        <category>Git</category>
+        
+        <category>GitHub</category>
+        
+        <category>깃</category>
+        
+        <category>깃허브</category>
+        
+        
+        <category>Git</category>
+        
+      </item>
     
       <item>
         <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(3/5)</title>
@@ -31,32 +187,32 @@
 	            &lt;p&gt;
 	                Visual Studio Code에는 &lt;code&gt;Stable&lt;/code&gt;과 &lt;code&gt;Insiders&lt;/code&gt;이렇게 2가지 버전이 있다. &lt;code&gt;Stable&lt;/code&gt;은 영어 뜻 그대로 안정적으로 사용할 수 있는 버전, &lt;code&gt;Insiders&lt;/code&gt;는 업데이트가 빨라서 최신 버전의 기능을 사용할 수 있지만 불안정하거나 버그가 발생할 확률이 존재한다. Git을 사용하는데 최신 버전은 중요하지 않으므로 우리는 &lt;code&gt;Stable&lt;/code&gt;을 다운받아 사용하도록 하자.  
 	            &lt;/p&gt;
-                &lt;img src=&quot;/assets/media/git/3/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;
 	            &lt;p&gt;
 	                동의를 선택하고 다음 버튼을 누른다. 
 	            &lt;/p&gt;
-                &lt;img src=&quot;/assets/media/git/3/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 &lt;br /&gt;	
 				&lt;br /&gt;
                 &lt;p&gt;
 	                설치할 디렉토리를 설정하고 다음 버튼을 누른다. 
 	            &lt;/p&gt;
-                &lt;img src=&quot;/assets/media/git/3/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 &lt;br /&gt;	
 				&lt;br /&gt;
                 &lt;p&gt;
 	                시작 메뉴 폴더를 만들지 물어보는데 그냥 다음 버튼을 누르자. 
 	            &lt;/p&gt;
-                &lt;img src=&quot;/assets/media/git/3/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 &lt;br /&gt;	
 				&lt;br /&gt;
                 &lt;p&gt;
 	                필요한 항목이 있다면 추가로 선택하고 다음 버튼을 눌러서 설치를 완료하자.
 	            &lt;/p&gt;
-                &lt;img src=&quot;/assets/media/git/3/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-                &lt;img src=&quot;/assets/media/git/3/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;img src=&quot;/assets/media/git/3/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 &lt;br /&gt;	
 				&lt;br /&gt;
 	        &lt;/div&gt;
@@ -72,26 +228,26 @@
 					&lt;p&gt;
 						Visual Studio Code를 열어서 왼쪽 메뉴중에 &lt;span style=&quot;color:red&quot;&gt;Explorer -&amp;gt; Open Folder&lt;/span&gt;를 클릭해서 버전관리를 하고 싶은 프로젝트의 디렉토리를 선택해준다. 본인은 여기서 C:\GitTest 디렉토리를 선택했고, index.html과 icon이미지 파일이 있다.
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-					&lt;img src=&quot;/assets/media/git/3/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 	&lt;br /&gt;	
 					&lt;br /&gt;
 					&lt;p&gt;
 						상단메뉴에서 &lt;span style=&quot;color:red&quot;&gt;Terminal-&amp;gt;New Terminal&lt;/span&gt;을 클릭한다.
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 	&lt;br /&gt;	
 					&lt;br /&gt;
 					&lt;p&gt;
 						이제 Terminal에서 &lt;code&gt;git init&lt;/code&gt; 명령을 입력해주자. 해당 명령어를 입력하면 .git 이라는 하위 디렉토리를 생성해주는데, 저장소에 필요한 뼈대 파일이 들어있다. 하지만 지금까지의 명령만으로는 프로젝트 내부의 어떤 파일도 버전 관리 항목에 들어가지 않는데, 여기서 &lt;code&gt;git add&lt;/code&gt;와 &lt;code&gt;git commit&lt;/code&gt; 명령으로 commit을 해주어야 파일 버전 관리를 시작한다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 	&lt;br /&gt;	
 					&lt;br /&gt;
 					&lt;p&gt;
 						&lt;code&gt;git add&lt;/code&gt; 명령은 버전 관리를 새롭게 추적할 파일을 추가할 때 사용하는 명령어이다. 해당 명령어를 입력받은 파일은 Workspace에서 Staging Area(index)로 추가된 Staged 상태의 파일이다.  
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img11.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img11.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 	&lt;br /&gt;
 					&lt;p&gt;
 						&lt;code&gt;git add .&lt;/code&gt; 명령을 입력하면 Workspace에 있는 파일 중 내용 변경이 있는 모든 파일을 선택하는 명령어인데, 프로젝트 내부 파일의 어떤 파일도 버전 관리 항목에 없으므로 해당 명령어를 입력했다. 만약 추가할 파일을 선택하고 싶을때는 &lt;code&gt;git add 파일이름.확장자&lt;/code&gt; 이렇게 입력만 하면 된다. 
@@ -104,7 +260,7 @@
 					&lt;p&gt;
 						&lt;code&gt;git commit&lt;/code&gt; 명령은 commit한 시점의 내용을 스냅샷으로 저장하고, 해당 스냅샷에 대한 commit 객체를 만드는 명령어이다. Staging Area(index)에 넣은 모든 Staged 상태의 파일을 commit해준다(Committed).
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
                 	&lt;br /&gt;		
 					&lt;p&gt;
 						&lt;code&gt;git commit -m “comment”&lt;/code&gt; 에서 -m은 commit 메시지를 파라미터로 넘기는 것인데, -m를 하나만 쓰면 제목만 -m를 두개 쓰면 제목과 Description이 된다.
@@ -112,37 +268,37 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Reversion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 	
-					&lt;img src=&quot;/assets/media/git/3/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Reversion&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 	
-					&lt;img src=&quot;/assets/media/git/3/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;		
 					&lt;p&gt;
 						이제 Git저장소 만드는 작업을 완료했으니 원격 저장소인 GitHub와 연동을 시켜보자. GitHub를 회원가입 후 상단 오른쪽 메뉴 중 New repository를 클릭해 GitHub내에 새로운 원격 저장소를 만든다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img15.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img15.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;		
 					&lt;p&gt;
 						Repository name으로 방금까지 작업해온 프로젝트인 GitTest를 입력하고 하단의 Create repository을 눌러서 GibHub저장소를 만들어 준다. 로컬 디렉토리 프로젝트의 이름과 GitHub 저장소의 이름이 동일할 필요는 없지만, 혼동을 방지하기 위해 이름을 동일하게 해서 진행한다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img16.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img16.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;		
 					&lt;p&gt;
 						이제 GitHub에 새로운 저장소가 만들어졌으니 로컬에 있는 프로젝트의 파일을 GitHub에 올리는 작업을 진행할 것이다. 다시 Visual Studio Code로 돌아가서 Terminal에 &lt;code&gt;git remote add origin https주소&lt;/code&gt;를 입력해 준다. https는 빨간색 네모칸에 있는 주소를 복사해서 넣으면 된다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img17.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-					&lt;img src=&quot;/assets/media/git/3/img18.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img17.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img18.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;		
 					&lt;p&gt;
 						다음으로 &lt;code&gt;git push origin master&lt;/code&gt;를 입력하면 GitHub저장소에 로컬 디렉토리 프로젝트의 파일들이 추가 된 것을 볼수있다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img19.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-					&lt;img src=&quot;/assets/media/git/3/img20.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img19.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img20.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;
                     &lt;li&gt;Git 저장소에서 Clone 하는 방법&lt;/li&gt;
@@ -152,14 +308,14 @@
 					&lt;p&gt;
 						Code를 클릭하면 Clone을 하기 위한 저장소에 대한 주소 정보가 나온다. 여기서는 HTTPS를 이용할 것이다. 먼저 해당 주소를 복사하자. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img21.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img21.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;
 					&lt;p&gt;
 						Visual Studio Code를 열어서 &lt;span style=&quot;color:red&quot;&gt;Explorer -&amp;gt; Clone Repository&lt;/span&gt;를 클릭해 방금 복사한 HTTPS주소를 입력하고 저장할 로컬 디렉토리를 설정만 해주면 완료이다. 
 					&lt;/p&gt;
-					&lt;img src=&quot;/assets/media/git/3/img22.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-					&lt;img src=&quot;/assets/media/git/3/img23.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img22.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img23.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;		
 					&lt;br /&gt;
                 &lt;/ol&gt;
@@ -192,7 +348,7 @@
 	                &lt;/li&gt;
 	            &lt;/ul&gt;
 				&lt;h4 style=&quot;color:blue;font-size: 20px;font-weight: bold;font-style: italic;&quot;&gt;Untracked : Tracked 파일을 제외한 나머지 파일. git add 명령을 통해 Staged로 변경할 수 있다.&lt;/h4&gt;
-				&lt;img src=&quot;/assets/media/git/3/img25.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/3/img25.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;		
 				&lt;br /&gt;
 				&lt;p&gt;
@@ -201,13 +357,13 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 	
-					&lt;img src=&quot;/assets/media/git/3/img26.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+					&lt;img src=&quot;/assets/media/git/3/img26.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;br /&gt;
 					&lt;br /&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;html&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 	
-					&lt;img src=&quot;/assets/media/git/3/img27.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;				
+					&lt;img src=&quot;/assets/media/git/3/img27.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;				
 	        &lt;/div&gt;
 	    &lt;/li&gt;
 	&lt;/ul&gt;
@@ -262,116 +418,116 @@
 	            &lt;p&gt;
 	                상단 링크를 방문해 최신버전의 Git Setup 파일을 받을 것이다. 아래 사진은 Git 홈페이지 모습이고, 빨간색 네모를 클릭한다. 
 	            &lt;/p&gt;
-	            &lt;img src=&quot;/assets/media/git/2/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	            &lt;img src=&quot;/assets/media/git/2/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 	            &lt;p&gt;
 	                다음으로 컴퓨터 운영체제의 환경에 맞는 Setup 파일을 다운로드 하면 된다. 본인은 Windows 64bit를 다운 받았다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                만약 Windows10 이라면 다음과 같은 과정을 거쳐서 운영체제의 bit가 몇인지 확인 할 수 있다. &lt;span style=&quot;color:red&quot;&gt;내컴퓨터 -&amp;gt; 속성 -&amp;gt; 정보&lt;/span&gt; 화면을 보게 되면 아래와 같이 현재 사용하고 있는 운영체제의 정보를 알 수 있다.
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-				&lt;img src=&quot;/assets/media/git/2/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Setup을 다운로드 완료했다면 실행시켜 주고, 처음 화면에서는 Next를 눌러준다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Git이 설치될 디렉토리를 설정해주는 화면인데 본인은 하드디스크 D에 설치하였기에 수정을 하였고, 특별히 요구사항이 없다면 그냥 Next버튼을 눌러주면 된다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                기본설정 상태로 Next를 눌러주면 된다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                시작메뉴에 Git을 추가할건지 묻는것인데 그냥 Next를 클릭해준다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                다음으로 default editor를 설정하는 화면인데 본인이 Git을 사용할 때 사용할 기본 프로그램을 선택하고 Next를 눌러주면 된다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Let Git decide를 선택하고 Next를 눌러준다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                다음으로 Git from the command line and also from 3rd-party software를 선택하고 Next를 누른다.
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img11.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img11.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Use Bundled OpenSSH를 선택하고 Next버튼을 누른다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Use the OpenSSL library를 클릭하고 Next를 누른다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Checkout Windows-style, commit Unix-style line endings를 선택하고 Next를 누른다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Use MinTTY(the default terminal of MSYS2)를 선택하고 Next를 누른다.
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img15.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img15.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Default(fast-forward or merge)를 선택하고 Next를 누른다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img16.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img16.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                Git Credential Manager를 선택하고 Next를 누른다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img17.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img17.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	            	Enable file system caching를 선택하고 Next를 누르면 이제 설치가 진행될 것이다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img18.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img18.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 	                설치가 완료되면 다음과 같이 Completing the Git Setup Wizard라는 말이 나올것이다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img19.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img19.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;	
 				&lt;br /&gt;	
 				&lt;p&gt;
 					설치가 완료된 후 시작메뉴에 Git폴더가 추가된 것을 볼 수 있다. Git 프로그램 항목에 대해 간단히 소개를 하자면 다음과 같다. 
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img20.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img20.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;p&gt;
 					Git Bash: 유닉스와 리눅스 스타일의 명령, 가장 많이 사용하기 때문에 추천.
 	            &lt;/p&gt;
@@ -382,7 +538,7 @@
 					Git GUI: 그랙픽 인터페이스. 초보자에게는 권장하지 않으며 가능한 명령어를 숙지하기 위해 Git Bash를 사용하자.
 	            &lt;/p&gt;
 				&lt;br /&gt;	
-				&lt;img src=&quot;/assets/media/git/2/img21.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img21.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;p&gt;
 					Git Bash를 실행시키고 ls 명령어를 입력한 모습이며, Git Bash를 어느 특정한 디렉토리를 선택하고 실행한 것이 아니라면 기본 디렉토리 위치는 &lt;span style=&quot;color:red&quot;&gt;C:\Users\사용자이름&lt;/span&gt; 이 된다. 
 	            &lt;/p&gt;
@@ -403,7 +559,7 @@
 	            &lt;p&gt;
 	                위 명령어를 입력 후 &lt;code&gt;git config --global --list&lt;/code&gt; 명령을 입력해 사용자이름과 이메일 주소가 잘 설정됬는지 확인한다.
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img22.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img22.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;p&gt;
 	                만약 프로젝트 마다 다른 이름과 이메일 주소를 사용하고 싶으면 &lt;code&gt;–global&lt;/code&gt; 옵션을 빼고 명령을 실행하면 된다. 
 	            &lt;/p&gt;
@@ -413,23 +569,23 @@
 					그리고 현재 사용자 이름과 이메일에 대한 설정은 &lt;span style=&quot;color:red&quot;&gt;C:\Users\사용자이름\.gitconfig&lt;/span&gt; 파일,
 					시스템 설정 내용은 &lt;span style=&quot;color:red&quot;&gt;설치하드:\Program Files\Git\etc\gitconfig&lt;/span&gt; 파일을 보면 된다.
 	            &lt;/p&gt;
-				&lt;img src=&quot;/assets/media/git/2/img23.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img23.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;
 				&lt;br /&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# 시스템 설정 내용 &lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-				&lt;img src=&quot;/assets/media/git/2/img24-1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-				&lt;img src=&quot;/assets/media/git/2/img24-2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img24-1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img24-2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;br /&gt;
 				&lt;br /&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# 현재 사용자 환경 설정 내용&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;global&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-				&lt;img src=&quot;/assets/media/git/2/img25-1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-				&lt;img src=&quot;/assets/media/git/2/img25-2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img25-1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/2/img25-2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	        &lt;/div&gt;
 	    &lt;/li&gt;
 	    &lt;hr class=&quot;hr-line2&quot; /&gt;
@@ -448,49 +604,49 @@
 							&lt;li&gt;cd 디렉토리명 : 현재 디렉토리에 존재하는 디렉토리 목록 중 일치하는 디렉토리로 이동&lt;/li&gt;
 							&lt;li&gt;cd /디렉토리명/디렉토리명 : 현재 위치에 상관없이 해당 디렉토리로 이동. 단, 전체 root를 입력해야 한다.&lt;/li&gt;
 						&lt;/ul&gt;
-						&lt;img src=&quot;/assets/media/git/2/img26.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-						&lt;img src=&quot;/assets/media/git/2/img27.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img26.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img27.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; : 현재 위치하고 있는 디렉토리의 전체 경로 출력.&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img28.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img28.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;ls(ll)&lt;/code&gt; : ls는 해당 디렉토리에 존재하는 파일과 폴더를 나타내 주며, ll을 입력하면 권한과 시간등 파일과 디렉토리에 대한 상세 정보가 나온다.
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img29.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img29.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;touch&lt;/code&gt; : 새로운 파일을 생성하거나, 해당 파일의 타임스탬프를 변경하는 용도로 사용한다.
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img30.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img30.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;rm&lt;/code&gt; :  현재 디렉토리에 존재하는 파일을 삭제하는 명령어.
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img31.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img31.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;mkdir&lt;/code&gt; :  현재 디렉토리에 새로운 폴더 생성.
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img32.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img32.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;rm -r&lt;/code&gt; :  현재 디렉토리에 있는 폴더 삭제 명령어.
 							&lt;span style=&quot;color:red&quot;&gt;rm -rf / 를 사용하게 되면, 컴퓨터에 있는 모든 파일과 디렉토리를 삭제하므로 주의해야 한다.&lt;/span&gt;
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img33.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img33.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
 							&lt;code&gt;mv&lt;/code&gt; : mv + 파일명 + 디렉토리명 입력을 통해 해당 파일을 입력한 디렉토리로 이동시킨다. 
 						&lt;/p&gt;
-						&lt;img src=&quot;/assets/media/git/2/img34.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+						&lt;img src=&quot;/assets/media/git/2/img34.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 					&lt;/li&gt;
 					&lt;li&gt;
 						&lt;p&gt;
@@ -563,7 +719,7 @@
 	                쉽게 정리하면 1명 이상이 개발하는 프로젝트를 관리하는데 도움을 주는 시스템이라고 생각하면 된다. 만약 프로젝트 진행 과정에서 버전관리에 대한 제대로 된 프로세스가 없다면, 소프트웨어 개발 과정 중 코드 일관성, 중복 내용, 병행개발 등 다양한 부분에서 문제가 발생할 우려가 있다.
 	            &lt;/p&gt;
 	            &lt;a href=&quot;https://namu.wiki/jump/AYW4qqTjN%2Fgv7iqWMuoscP5oCFZyOVqkLhsxL60UYLFPbKhEgbouEYurufiPYVRnilPUnSDMAnci47JegFwSUGNtLK4X6d5H5uNY08n8pFU%3D&quot; target=&quot;_blank&quot;&gt;
-				&lt;img src=&quot;/assets/media/git/1/down.jpg&quot; alt=&quot;namuwiki reference&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+				&lt;img src=&quot;/assets/media/git/1/down.jpg&quot; alt=&quot;namuwiki reference&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 				&lt;/a&gt;
 	            &lt;p&gt;
 	                간단한 예시를 들자면 다음 사진과 같다. 누구나 한 번쯤은 회사 업무 및 학교 과제를 진행할 때 다음과 같이 파일의 버전을 수기로 관리해본 경험이 있을 것이다. 만약 2인 이상의 협업 프로젝트를 다음과 같이 관리한다면, 파일을 병합하는 과정에서 시간도 걸리고, 수기로 병합하는 과정에서 놓치는 부분도 생길 것이므로 버전 관리 시스템이 절실하게 필요한 것이다.
@@ -597,7 +753,7 @@
 	            &lt;ol&gt;
 	                &lt;li&gt;
 	                    &lt;h4&gt;로컬 버전 관리(Local VCS)&lt;/h4&gt;
-	                    &lt;img src=&quot;/assets/media/git/1/image1.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image1.jpg&quot; alt=&quot;Local VCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	                    &lt;p&gt;
 							디렉토리에 파일을 복사해 버전을 관리하는 방식은 간단하기 때문에 자주 사용되지만, 실수로 삭제하거나 파일을 잘못 고치는 문제 때문에 데이터베이스를 사용해 파일의 변경 정보를 관리하는 시스템을 만들었는데, 그것이 로컬 버전 관리 시스템이다. 여러 사람과의 협업보다는 개인 프로젝트에 적합하며, 컴퓨터가 고장나 내부 정보가 통째로 날아간다면 복구할 방법이 없다는 단점이 있다. 
 	                    &lt;/p&gt;
@@ -608,14 +764,14 @@
 					&lt;br /&gt;
 	                &lt;li&gt;
 	                    &lt;h4&gt;중앙집중식 버전 관리(CVCS)&lt;/h4&gt;
-	                    &lt;img src=&quot;/assets/media/git/1/image2.jpg&quot; alt=&quot;CVCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image2.jpg&quot; alt=&quot;CVCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	                    &lt;p&gt;
 	                        중앙 Server에서 모든 버전의 데이터를 관리 및 저장하며, 수정하기 위해서는 Server에 요청해 파일을 받은 후 수정하고, 다시 Server에 올리는 방식이다. 로컬 버전 관리보다 협업이 쉬워지고 관리자가 누가 어떤 일을 하고 있는지 알기 쉬운 장점이 있다. 하지만 단점으로 2개를 꼽을 수 있다.
 	                    &lt;/p&gt;
 	                    &lt;ul&gt;
 	                        &lt;li&gt;
 	                            &lt;p&gt;협업의 규모가 커지면 수정 충돌 문제가 발생할 우려가 있다.&lt;/p&gt;
-	                            &lt;img src=&quot;/assets/media/git/1/image3.jpg&quot; alt=&quot;CVCS problem&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                            &lt;img src=&quot;/assets/media/git/1/image3.jpg&quot; alt=&quot;CVCS problem&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	                            &lt;p&gt;
 	                                간단한 예시로 같은 파일을 2명의 작업자가 중앙 Server로부터 받은 이후 각자 다른 내용을 수정 후 다시 Server에 올렸을 때 두 개의 수정내용 중 한 개만 반영되는 수정 충동 문제가 발생할 수 있다.
 	                            &lt;/p&gt;
@@ -633,7 +789,7 @@
 					&lt;br /&gt;
 	                &lt;li&gt;
 	                    &lt;h4&gt;분산 버전 관리 시스템(DVCS)&lt;/h4&gt;
-	                    &lt;img src=&quot;/assets/media/git/1/image4.jpg&quot; alt=&quot;DVCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	                    &lt;img src=&quot;/assets/media/git/1/image4.jpg&quot; alt=&quot;DVCS image&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	                    &lt;p&gt;
 	                        서버뿐만 아니라 모든 사용자가 모든 버전에 대한 히스토리를 가지고 있기 때문에, 로컬에서도 수정 이력과 내용을 볼 수 있다. 그리고 인터넷 연결 문제 때문에 작업에 지장을 받지 않으며, 만약 중앙 Server나 로컬 컴퓨터가 고장 나도, 정상적인 로컬이 하나만 살아 있어도 모든 데이터를 복원하는데 문제가 되지 않기 때문에 가장 안정적이고, 편리하나, 이는 로컬의 저장 공간을 점유한다는 단점이 존재한다. 
 	                    &lt;/p&gt;
@@ -726,7 +882,7 @@
 	                    &lt;/p&gt;
 	                &lt;/li&gt;
 	            &lt;/ol&gt;
-	            &lt;img src=&quot;/assets/media/git/1/image5.jpg&quot; alt=&quot;Git working flow&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
+	            &lt;img src=&quot;/assets/media/git/1/image5.jpg&quot; alt=&quot;Git working flow&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
 	        &lt;/div&gt;
 	    &lt;/li&gt;
 	&lt;/ul&gt;
