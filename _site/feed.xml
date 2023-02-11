@@ -5,12 +5,179 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Feb 2023 22:25:49 +0800</pubDate>
-    <lastBuildDate>Fri, 10 Feb 2023 22:25:49 +0800</lastBuildDate>
+    <pubDate>Sat, 11 Feb 2023 11:00:42 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Feb 2023 11:00:42 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
-        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(4/6)</title>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(5/5)</title>
+        <description>&lt;div class=&quot;wrapper&quot;&gt;
+	&lt;blockquote&gt;
+	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
+	    &lt;ul&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index1&quot;&gt;Jekyll 사용을 위한 기본 설치&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index2&quot;&gt;Github pages 만들기(jekyll theme)&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href=&quot;#index3&quot;&gt;PULL &amp;amp; PUSH 에러 대처법&lt;/a&gt;&lt;/li&gt;
+	    &lt;/ul&gt;
+	&lt;/blockquote&gt;
+    &lt;p&gt;
+        이번에는 github pages와 jekyll을 이용해 웹페이지 만드는 방법에 대해 알아보자. 블로그의 종류에는 naver, tistory등 수많은 플랫폼이 있지만 github pages는 markdown기반으로 포스팅을 할 수 있고, 본인이 원한다면 custom domain도 사용 가능하며, jekyll 테마를 지원해서 디자인에 선택의 폭이 훨씬 좋다. 
+	&lt;/p&gt;
+	&lt;ul&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index1&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold;&quot;&gt;Jekyll 사용을 위한 기본 설치&lt;/h3&gt;
+                &lt;a href=&quot;https://rubyinstaller.org/downloads/&quot; target=&quot;_blank&quot;&gt;https://rubyinstaller.org/downloads/&lt;/a&gt;
+                &lt;p&gt;
+                    상단 사이트를 방문해 &lt;code&gt;Ruby+Devkit&lt;/code&gt;를 다운로드 받자. 본인은 Ruby+Devkit 3.1.3-1 (x64)를 다운로드해 설치했다.
+                &lt;/p&gt;
+                &lt;br /&gt;	
+                &lt;p&gt;
+                    I accept the License를 클릭하고 Next를 누른다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img1.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+	            &lt;p&gt;
+                    설치할 디렉토리를 선택하고 Next를 누른다.
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img2.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+	            &lt;p&gt;
+	                다음 화면에서도 아무것도 건들지 않고, Next를 클릭한다.
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img3.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+	                Run ridk install을 선택한 상태에서 Finish버튼을 누르자.
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img4.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+	                우리는 1, 3번 모두 install을 해야 하기 때문에, &lt;span style=&quot;color:red&quot;&gt;ENTER(엔터)&lt;/span&gt;를 눌러서 install을 진행시킨다.
+	            &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img5.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+	                이제 명령프롬프트 창에 Ruby와 RubyGems가 잘 설치되었는지 확인을 해보자. 아래 명령어를 입력하고 버전이 나온다면 설치가 완료된것이다. 
+                &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Ruby&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# RubyGems&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	
+                &lt;img src=&quot;/assets/media/git/5/img6.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+	                다음으로 &lt;code&gt;gem install jekyll bundler&lt;/code&gt;를 통해 jekyll과 bundler gems를 설치하고, 아래 명령어를 입력해 버전이 정상적으로 나오면 준비가 끝난 것이다.
+                &lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Jekyll Version&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Bundler Version&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bundler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	
+                &lt;img src=&quot;/assets/media/git/5/img7.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+                &lt;br /&gt;	
+				&lt;br /&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+		&lt;br /&gt;
+	    &lt;hr class=&quot;hr-line2&quot; /&gt;
+	    &lt;li&gt;
+	        &lt;div id=&quot;index2&quot;&gt;
+	            &lt;h3 style=&quot;font-weight:bold&quot;&gt;Github pages 만들기(jekyll theme)&lt;/h3&gt;
+                &lt;a href=&quot;http://jekyllthemes.org/&quot; target=&quot;_blank&quot;&gt;http://jekyllthemes.org/&lt;/a&gt;
+                &lt;br /&gt;
+                &lt;a href=&quot;https://github.com/topics/jekyll-theme&quot; target=&quot;_blank&quot;&gt;https://github.com/topics/jekyll-theme&lt;/a&gt;
+                &lt;br /&gt;
+                &lt;a href=&quot;https://jamstackthemes.dev/ssg/jekyll/&quot; target=&quot;_blank&quot;&gt;https://jamstackthemes.dev/ssg/jekyll/&lt;/a&gt;
+                &lt;br /&gt;
+                &lt;p&gt;
+                    상단 링크를 통해 github page에 적용할 jekyll theme를 고르면 되는데, 상단 사이트외 jekyll theme를 제공하는 사이트는 많다. 
+                &lt;/p&gt;
+                &lt;br /&gt;
+                &lt;p&gt;
+                    원하는 Theme을 고른후, 해당 Theme에 대한 repository를 방문하고 상단 메뉴 있는 Fork를 눌러서 Create a new fork를 클릭해준다. 
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img8.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    Repository name에 &amp;lt;Owner이름&amp;gt;.github.io를 입력해주고, Description에는 설명을 적고 Create fork를 클릭한다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img9.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    Fork를 통해 repository가 만들어졌으면, Settings에 들어간다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img10.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    Settings에서 Pages를 들어간후, Branch부분에서 None에서 다른것으로 변경하고, save버튼을 눌러준다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img11.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    새로고침을 하면 Visit site버튼이 활성화 된다. 이렇게 하면 나만의 github pages(블로그)가 만들어 진것이다. 이후 &lt;code&gt;_config.yml&lt;/code&gt;이나 &lt;code&gt;Gemfile&lt;/code&gt;를 수정하면 되는데, 모든 theme마다 다르기 때문에 &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;_blank&quot;&gt;https://jekyllrb.com/&lt;/a&gt; 해당 사이트를 참고하기 바란다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img12.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    GitHub로 돌아와 &lt;span style=&quot;color:red&quot;&gt;Code -&amp;gt; HTTPS&lt;/span&gt;을 복사해 &lt;code&gt;git clone&lt;/code&gt;을 통해 로컬 저장소에 repository를 clone한다. 
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img13.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+                &lt;p&gt;
+                    로컬 저장소에 clone을 완료했다면 cmd(명령프롬프트)를 열어 cd 명령어를 통해 해당 디렉토리로 이동한 후, &lt;code&gt;Jekyll serve&lt;/code&gt; 명령을 입력하면 local 서버주소가 나오고, 브라우저에 해당 주소를 입력하면 사이트가 작동하는 것을 확인할 수 있다.
+                &lt;/p&gt;
+                &lt;img src=&quot;/assets/media/git/5/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
+				&lt;br /&gt;	
+				&lt;br /&gt;
+	        &lt;/div&gt;
+	    &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;br /&gt;
+	&lt;p&gt;이상으로 깃 &amp;amp; 깃허브(Git &amp;amp; Github) 입문자를 위한 사용법 튜토리얼을 마치겠다.&lt;/p&gt;
+	&lt;br /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Version&lt;/strong&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Rev.0(2023/02/11) : Release&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 11 Feb 2023 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/5</link>
+        <guid isPermaLink="true">http://localhost:4000/5</guid>
+        
+        <category>Git</category>
+        
+        <category>GitHub</category>
+        
+        <category>깃</category>
+        
+        <category>깃허브</category>
+        
+        
+        <category>Git</category>
+        
+      </item>
+    
+      <item>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(4/5)</title>
         <description>&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;blockquote&gt;
 	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
@@ -166,7 +333,7 @@
       </item>
     
       <item>
-        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(3/6)</title>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(3/5)</title>
         <description>&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;blockquote&gt;
 	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
@@ -396,7 +563,7 @@
       </item>
     
       <item>
-        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(2/6)</title>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(2/5)</title>
         <description>&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;blockquote&gt;
 	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
@@ -686,7 +853,7 @@
       </item>
     
       <item>
-        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(1/6)</title>
+        <title>깃 &amp; 깃허브(Git &amp; Github) 입문자를 위한 사용법 튜토리얼(1/5)</title>
         <description>&lt;div class=&quot;wrapper&quot;&gt;
 	&lt;blockquote&gt;
 	    &lt;h4&gt;&lt;b&gt;목차&lt;/b&gt;&lt;/h4&gt;
