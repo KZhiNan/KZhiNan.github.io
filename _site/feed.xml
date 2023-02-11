@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Feb 2023 11:00:42 +0800</pubDate>
-    <lastBuildDate>Sat, 11 Feb 2023 11:00:42 +0800</lastBuildDate>
+    <pubDate>Sat, 11 Feb 2023 11:03:45 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Feb 2023 11:03:45 +0800</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -143,7 +143,6 @@
                     로컬 저장소에 clone을 완료했다면 cmd(명령프롬프트)를 열어 cd 명령어를 통해 해당 디렉토리로 이동한 후, &lt;code&gt;Jekyll serve&lt;/code&gt; 명령을 입력하면 local 서버주소가 나오고, 브라우저에 해당 주소를 입력하면 사이트가 작동하는 것을 확인할 수 있다.
                 &lt;/p&gt;
                 &lt;img src=&quot;/assets/media/git/5/img14.jpg&quot; alt=&quot;img&quot; width=&quot;100%&quot; height=&quot;100%&quot; onclick=&quot;window.open(this.src)&quot; /&gt;
-				&lt;br /&gt;	
 				&lt;br /&gt;
 	        &lt;/div&gt;
 	    &lt;/li&gt;
